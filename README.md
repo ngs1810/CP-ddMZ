@@ -29,3 +29,7 @@ CNVnator and RetroSeq only requires a single script, whereas DELLY variant calle
 ## 3.0 Somatic Variant Findings
 - 3.1 Mutect2
 - 3.2 MosaicHunter
+
+## 4.0 Visualisation
+
+## 5.0 References
