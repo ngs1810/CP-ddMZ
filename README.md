@@ -11,15 +11,17 @@ Samples:six families (affected twin, parents and unaffected twins)
 ## 2.0 Structural Variant Findings
 The pipeline to identify structural variants was executed similarly for all three variants that are obtained using three different variant callers (CNVnator, Delly and RetroSeq). The orders are as follows:-
 
-*Variant Calling*
+## 2.1 Variant Calling
 
-*In-house filtering*: To eliminate variants that are frequently present in 24 samples
+## 2.2 Post-Variant Calling
 
-*Variant Inheritance*: To segregate variant according to inheritance patterns, whether it is only present in affected twin, or both twins and whether these variants are inherited or de novo.
+- *In-house filtering*: To eliminate variants that are frequently present in 24 samples according to SV type. Firstly, variants that commonly present in the population (all samples) was identified and combined, creating a minidatabase. This was done prior to using this information to eliminate common variants in each individual. Common variants are variants that present in more than eight individuals/more than two families.
 
-*Variant Annotations*: In order to obtain further information on the variants, AnnotSV (Geoffroy et al., 2018) was used.
+- *Variant Inheritance*: To segregate variant according to inheritance patterns, whether it is only present in affected twin, or both twins and whether these variants are inherited or de novo. For CNVnator and RetroSeq-based variants, the variants are segregated according to the overlaps of the variant coordinates, whereas, genotypes information are used for Delly-based variants
 
-*Hard-Filter*:The variants are filtered based on prediction scores respective to type of SV
+- *Variant Annotations*: In order to obtain further information on the variants, AnnotSV (Geoffroy et al., 2018) was used.
+
+- *Hard-Filter*:The variants are filtered based on prediction scores respective to type of SV
 
 The scripts attached are labeled with name of variant caller, and the order of the script.
 
