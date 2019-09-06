@@ -1,5 +1,5 @@
 #!/bin/bash
-## Script to identify overlaps : (Twin_1 VS (Parents)) VS Twin_2 for CNVnator only (DUP and DUP)
+## Script to identify inheritance of variants through reciprocal overlaps : (Twin_1 VS (Parents)) VS Twin_2 for CNVnator only (DUP and DUP)
 ##
 ## Date: 15 May 2019
 ##
@@ -79,7 +79,7 @@ for V in $Q;
 			cat 1.$familyID.$S.parents.bed | awk '{if ($5 != ".") print $1, $2, $3, $4}' | tr " " "\t" > 3.$familyID.$S.INH.bed
 		wait
 		#4.Are the denovo variants found in both twins or only in proband?
-			bedtools intersect -a 2.$familyID.$S.DNV.bed -b  ${INDIR}/$Twin_2 -wao > 4.$familyID.$S.Twin.DNV.bed
+			bedtools intersect -a 2.$familyID.$S.DNV.bed -b  ${INDIR}/$Twin_2 -f 0.70 -r -wao > 4.$familyID.$S.Twin.DNV.bed
 			cat 4.$familyID.$S.Twin.DNV.bed | awk '{if ($5 == ".") print $1, $2, $3, $4}' | tr " " "\t" > 5.$familyID.$S.Discordant.DNV.bed
 			cat 4.$familyID.$S.Twin.DNV.bed | awk '{if ($5 != ".") print $1, $2, $3, $4}' | tr " " "\t" > 6.$familyID.$S.Shared.DNV.bed
 		wait
