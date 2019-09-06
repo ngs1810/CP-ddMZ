@@ -57,11 +57,8 @@ q=$(ls *.fullAnnotated.tsv)
 			
 			##to choose the column, select the rows that has particular value of columns
 			
-			##$27=gnomad AF
-			##$(NF-16)=pLi Exac
-			##$(NF-15)=delZ_Exac
-			##$(NF-14)=dupZ_Exac
-			##$79=AnnotSV ranking
+			##$38=gnomad AF
+			##$90=AnnotSV ranking	
 			## and pipe into outputs
 
 			#filtering using the gnomad and AnnotSV ranking
