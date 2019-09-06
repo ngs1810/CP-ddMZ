@@ -67,7 +67,10 @@ for V in $Q;
 				
 		echo "Processing for $familyID"
 		
-			bedtools intersect -a $Twin_1 -b $Dad $Mum -wao > ${OUTDIR}/1.$familyID.$S.parents.bed
+		#for deletions and duplication-from CNVnator : reciprocal overlap (-f 0.70, -r)
+		#for MEI:reciprocal options are not needed
+		
+			bedtools intersect -a $Twin_1 -b $Dad $Mum -f 0.70 -r -wao > ${OUTDIR}/1.$familyID.$S.parents.bed
 		
 		cd ${OUTDIR}
 
@@ -81,7 +84,7 @@ for V in $Q;
 			cat 4.$familyID.$S.Twin.DNV.bed | awk '{if ($5 != ".") print $1, $2, $3, $4}' | tr " " "\t" > 6.$familyID.$S.Shared.DNV.bed
 		wait
 		#5.Are Inherited variants found in both twins or only in proband?
-			bedtools intersect -a 3.$familyID.$S.INH.bed -b  ${INDIR}/$Twin_2 -wao > 7.$familyID.$S.Twin.INH.bed
+			bedtools intersect -a 3.$familyID.$S.INH.bed -b  ${INDIR}/$Twin_2 -f 0.70 -r -wao > 7.$familyID.$S.Twin.INH.bed
 			cat 7.$familyID.$S.Twin.INH.bed | awk '{if ($5 == ".") print $1, $2, $3, $4}' | tr " " "\t" > 8.$familyID.$S.Discordant.INH.bed
 			cat 7.$familyID.$S.Twin.INH.bed | awk '{if ($5 != ".") print $1, $2, $3, $4}' | tr " " "\t" > 9.$familyID.$S.Shared.INH.bed
 	
