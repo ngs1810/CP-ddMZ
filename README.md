@@ -26,10 +26,10 @@ CNVnator and RetroSeq only requires a single script, whereas DELLY variant calle
 
 *The scripts attached are labeled with name of variant caller, and the order of the script. For variant calling steps, the scripts are labelled with 0 and post variant calling will be labeled as 1 and so on. Both CNVnator and RetroSeq-based variants undergo same post-variant caliing process, therefore only one of each script is attached here to avoid repetitions*
 
+## 2.3 SV-Visualisation
+
 ## 3.0 Somatic Variant Findings
 - 3.1 Mutect2
 - 3.2 MosaicHunter
 
-## 4.0 Visualisation
-
-## 5.0 References
+## 4.0 References
