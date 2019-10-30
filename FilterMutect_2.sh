@@ -77,12 +77,10 @@ gatk FilterMutectCalls \
 --max-strand-artifact-probability 1.00 \
 -O $OutDir/${QUERIES[$SLURM_ARRAY_TASK_ID]}.filtered.vcf >> $tmpDir/${QUERIES[$SLURM_ARRAY_TASK_ID]}.filter.pipeline.log 2>&1
 
-#module load BCFtools
-#bcftools view -O v -f PASS -i 'FORMAT/AF[0:0] < 0.4' $OutDir/${QUERIES[$SLURM_ARRAY_TASK_ID]}.filtered.vcf > $OutDir/${QUERIES[$SLURM_ARRAY_TASK_ID]}_PASS.vcf
+module load BCFtools
+bcftools view -O v -f PASS -i 'FORMAT/AF[0:0] < 0.4' $OutDir/${QUERIES[$SLURM_ARRAY_TASK_ID]}.filtered.vcf > $OutDir/${QUERIES[$SLURM_ARRAY_TASK_ID]}_PASS.vcf
 
 #--max-germline-posterior 0.1 \
 #--max-strand-artifact-probability 1.00 \
 #--min-strand-artifact-allele-fraction 0.01 \
-
-
 #V2038-1.dedup.realigned.recalibrated.bam.mosaic.PONs_gnomad.vcf
