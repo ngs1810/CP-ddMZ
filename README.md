@@ -2,7 +2,7 @@
 
 This project is done as part of research year of Masters of Biotechnology (Biomedical Science) 
 
-Samples:six families (affected twin, parents and unaffected twins)
+Samples: Six families (affected twin, parents and unaffected twin)
 
 ## 1.0 Single Nucleotide Variant Findings
 - 1.1 Variant Calling using GATK (version 3.7-0-gcfedb67)
