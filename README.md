@@ -5,8 +5,9 @@ This project is done as part of research year of Masters of Biotechnology (Biome
 Samples:six families (affected twin, parents and unaffected twins)
 
 ## 1.0 Single Nucleotide Variant Findings
-- 1.1 Variant Calls
+- 1.1 Variant Calling using GATK (version 3.7-0-gcfedb67)
 - 1.2 Annotations using ANNOVAR
+- 1.3 Inheritance pattern: to identify de novo, compound heterozygous, homozygous and X-linked variants
 
 ## 2.0 Structural Variant Findings
 The pipeline to identify structural variants was executed similarly for all three variants that are obtained using three different variant callers (CNVnator, Delly and RetroSeq). The orders are as follows:-
@@ -26,10 +27,11 @@ CNVnator and RetroSeq only requires a single script, whereas DELLY variant calle
 
 *The scripts attached are labeled with name of variant caller, and the order of the script. For variant calling steps, the scripts are labelled with 0 and post variant calling will be labeled as 1 and so on. Both CNVnator and RetroSeq-based variants undergo same post-variant caliing process, therefore only one of each script is attached here to avoid repetitions*
 
-## 2.3 SV-Visualisation
+## 2.3 SV-Visualisation using SVPV
 
 ## 3.0 Somatic Variant Findings
 - 3.1 Mutect2
-- 3.2 MosaicHunter
+- 3.2 Filter mutect calls
+- 3.3 MosaicHunter
 
 ## 4.0 References
