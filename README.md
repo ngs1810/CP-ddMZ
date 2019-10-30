@@ -27,11 +27,20 @@ CNVnator and RetroSeq only requires a single script, whereas DELLY variant calle
 
 *The scripts attached are labeled with name of variant caller, and the order of the script. For variant calling steps, the scripts are labelled with 0 and post variant calling will be labeled as 1 and so on. Both CNVnator and RetroSeq-based variants undergo same post-variant caliing process, therefore only one of each script is attached here to avoid repetitions*
 
-## 2.3 SV-Visualisation using SVPV
+## 2.3 SV-Visualisation using SVPV 
+- *SVPV.sh*
 
 ## 3.0 Somatic Variant Findings
-- 3.1 Mutect2
-- 3.2 Filter mutect calls
-- 3.3 MosaicHunter
+- 3.1 To detect somatic variants through comparison between affected and unaffected twin in analogy of tumour and normal cells using Mutect2 *(Mutect_1.sh)*
+- 3.2 Filter Mutect2 calls based on possibility of being germline and strand aftifacts  (*FilterMutect_2.sh*)
+- 3.3 MosaicHunter *(MosaicHunter_paired.sh* *MosaicHunter_trio.sh)*
 
 ## 4.0 References
+- Geoffroy V, Herenger Y, Kress A, Stoetzel C, Piton A, Dollfus H, Muller J.;AnnotSV: An integrated tool for Structural Variations annotation.Bioinformatics. 2018 Apr 14. doi: 10.1093/bioinformatics/bty304
+- Jacob E. Munro, Sally L. Dunwoodie, Eleni Giannoulatou; SVPV: a structural variant prediction viewer for paired-end sequencing datasets. Bioinformatics 2017; 33 (13): 2032-2033. doi: 10.1093/bioinformatics/btx117
+- Abyzov A, Urban AE, Snyder M, Gerstein M.CNVnator: an approach to discover, genotype, and characterize typical and atypical CNVs from family and population genome sequencing.Genome Res. 2011 Jun;21(6):974-84. doi: 10.1101/gr.114876.110.
+- Tobias Rausch, Thomas Zichner, Andreas Schlattl, Adrian M. Stuetz, Vladimir Benes, Jan O. Korbel.
+Delly: structural variant discovery by integrated paired-end and split-read analysis.
+Bioinformatics 2012 28: i333-i339.
+- Mutect2:https://software.broadinstitute.org/gatk/documentation/tooldocs/3.6-0/org_broadinstitute_gatk_tools_walkers_cancer_m2_MuTect2.php
+- Huang, A.Y., Zhang, Z., Ye, A.Y., Dou, Y., Yan, L., Yang, X., Zhang, Y., and Wei, L. (2017) MosaicHunter: accurate detection of postzygotic single-nucleotide mosaicism through next-generation sequencing of unpaired, trio, and paired samples. Nucleic Acids Res 45, e76.
