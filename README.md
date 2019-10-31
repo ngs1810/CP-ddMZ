@@ -6,7 +6,7 @@ Samples: Six families (affected twin, parents and unaffected twin)
 
 ## 1.0 Single Nucleotide Variant Findings
 - 1.1 Variant Calling using GATK (version 3.7-0-gcfedb67) (*GATKv3.x.HC.forGenomes.Local.sh*)
-- 1.2 Annotations using ANNOVAR (*ANNOVARv3.SH*)
+- 1.2 Annotations using ANNOVAR (*ANNOVARv3.sh*)
 - 1.3 Inheritance pattern: to identify de novo, compound heterozygous, homozygous and X-linked variants (*TwinKeyMatching.sh*)
 
 ## 2.0 Structural Variant Findings
