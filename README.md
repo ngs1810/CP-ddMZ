@@ -5,9 +5,9 @@ This project is done as part of research year of Masters of Biotechnology (Biome
 Samples: Six families (affected twin, parents and unaffected twin)
 
 ## 1.0 Single Nucleotide Variant Findings
-- 1.1 Variant Calling using GATK (version 3.7-0-gcfedb67)
-- 1.2 Annotations using ANNOVAR
-- 1.3 Inheritance pattern: to identify de novo, compound heterozygous, homozygous and X-linked variants
+- 1.1 Variant Calling using GATK (version 3.7-0-gcfedb67) (*GATKv3.x.HC.forGenomes.Local.sh*)
+- 1.2 Annotations using ANNOVAR (*ANNOVARv3.SH*)
+- 1.3 Inheritance pattern: to identify de novo, compound heterozygous, homozygous and X-linked variants (*TwinKeyMatching.sh*)
 
 ## 2.0 Structural Variant Findings
 The pipeline to identify structural variants was executed similarly for all three variants that are obtained using three different variant callers (CNVnator, Delly and RetroSeq). The orders are as follows:-
@@ -34,6 +34,7 @@ CNVnator and RetroSeq only requires a single script, whereas DELLY variant calle
 - 3.1 To detect somatic variants through comparison between affected and unaffected twin in analogy of tumour and normal cells using Mutect2 *(Mutect_1.sh)*
 - 3.2 Filter Mutect2 calls based on possibility of being germline and strand aftifacts  (*FilterMutect_2.sh*)
 - 3.3 MosaicHunter *(MosaicHunter_paired.sh* *MosaicHunter_trio.sh)*
+- 3.4 Annotating Mutect2 calls (*ANNOVARv3.sh*)
 
 ## 4.0 References
 - Geoffroy V, Herenger Y, Kress A, Stoetzel C, Piton A, Dollfus H, Muller J.;AnnotSV: An integrated tool for Structural Variations annotation.Bioinformatics. 2018 Apr 14. doi: 10.1093/bioinformatics/bty304
