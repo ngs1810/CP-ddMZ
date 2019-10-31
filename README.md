@@ -10,7 +10,7 @@ Samples: Six families (affected twin, parents and unaffected twin)
 - 1.3 Inheritance pattern: to identify de novo, compound heterozygous, homozygous and X-linked variants (*TwinKeyMatching.sh*)
 
 ## 2.0 Structural Variant Findings
-The pipeline to identify structural variants was executed similarly for all three variants that are obtained using three different variant callers (CNVnator, Delly and RetroSeq). The orders are as follows:-
+The pipeline to identify structural variants was executed similarly for all three variants that are obtained using three different variant callers (CNVnator, Delly and RetroSeq). The orders are as follows: Variant Calling --> PostVariant Calling --> Visualisation.
 
 ## 2.1 Variant Calling
 CNVnator and RetroSeq only requires a single script, whereas DELLY variant callers requires multiple scripts as along the variant calling process, these variants will be assessed and filtered thoroughly.
